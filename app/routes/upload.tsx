@@ -70,6 +70,8 @@ const Upload = () => {
 
         setStatusText('analaysis complete, redirecting....');
         console.log(data);
+
+        navigate(`/resume/${uuid}`);
     }
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -117,8 +119,8 @@ const Upload = () => {
                                 <textarea rows={5} name="job-description" placeholder="Job Description" id="job-description" />
                             </div>
                             <div className="form-div">
-                                <label htmlFor="uploader">Upload Resume</label>
-                                <FileUploader onFileSelect={handleFileSelect} />
+                                <label >Upload Resume</label>
+                                <FileUploader  onFileSelect={handleFileSelect} />
                             </div>
 
                             <button className="primary-button" type="submit">
