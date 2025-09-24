@@ -6,7 +6,7 @@ import Summary from "~/components/summary";
 import { usePuterStore } from "~/lib/puter";
 
 export const meta = () => {
-    [
+    return [
         { title: 'Resumind | Review' },
         { name: 'description', content: 'Detailed overview of your Resume' },
     ]
@@ -34,6 +34,8 @@ const Resume = () => {
             if (!resume) return;
 
             const data = JSON.parse(resume);
+            setFeedback(data.feedback);
+
             const resumeBlob = await fs.read(data.resumePath);
 
             if (!resumeBlob) return;
@@ -49,7 +51,7 @@ const Resume = () => {
             const imageUrl = URL.createObjectURL(imageBlob);
             setImageUrl(imageUrl);
 
-            setFeedback(data.feedback);
+            
             console.log({ resumeUrl, imageUrl, feedback: data.feedback });
         }
 
