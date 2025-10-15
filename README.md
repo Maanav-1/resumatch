@@ -39,7 +39,6 @@ Resumatch is a modern web application that helps job seekers optimize their resu
   - PDF.js for PDF processing
   - React Dropzone for file uploads
   - Puter.js for AI integration
-  - Docker support for deployment
 
 ## Getting Started
 
