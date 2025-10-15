@@ -1,7 +1,5 @@
 # Resumatch
 
-![Resumatch Logo](/public/images/bg-main.svg)
-
 Resumatch is a modern web application that helps job seekers optimize their resumes through AI-powered analysis and feedback. Get detailed insights about your resume's ATS compatibility, content quality, and improvement suggestions.
 
 ## Features
