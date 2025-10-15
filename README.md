@@ -1,40 +1,77 @@
-# Welcome to React Router!
+# Resumatch
 
-A modern, production-ready template for building full-stack React applications using React Router.
+![Resumatch Logo](/public/images/bg-main.svg)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Resumatch is a modern web application that helps job seekers optimize their resumes through AI-powered analysis and feedback. Get detailed insights about your resume's ATS compatibility, content quality, and improvement suggestions.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🤖 **AI-Powered Resume Analysis**
+  - ATS (Applicant Tracking System) compatibility scoring
+  - Detailed feedback on content, structure, and formatting
+  - Actionable improvement suggestions
+
+- 📊 **Comprehensive Scoring**
+  - Overall resume score
+  - Tone & Style evaluation
+  - Content quality assessment
+  - Structure analysis
+  - Skills matching
+
+- 🎯 **Job-Specific Feedback**
+  - Tailored analysis based on job description
+  - Company and role-specific recommendations
+  - Skill gap identification
+
+- � **User-Friendly Interface**
+  - Modern, responsive design
+  - Intuitive file upload
+  - Visual score representation
+  - PDF preview support
+
+## Tech Stack
+
+- **Frontend**
+  - React with TypeScript
+  - React Router v7 for routing
+  - TailwindCSS for styling
+  - Zustand for state management
+
+- **Core Features**
+  - PDF.js for PDF processing
+  - React Dropzone for file uploads
+  - Puter.js for AI integration
+  - Docker support for deployment
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js 20 or higher
+- npm or yarn package manager
+
+
 ### Installation
 
-Install the dependencies:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd resumatch
+```
 
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
-## Building for Production
+### Building for Production
 
 Create a production build:
 
@@ -42,46 +79,41 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+## Environment Setup
 
-### Docker Deployment
+The application requires the following environment variables:
 
-To build and run using Docker:
+- Puter.js API configuration (will be initialized automatically in the application)
 
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+├── app/
+│   ├── components/    # Reusable UI components
+│   ├── constants/     # Application constants
+│   ├── lib/          # Utility functions and helpers
+│   ├── routes/       # Application routes
+│   └── types/        # TypeScript type definitions
+├── public/           # Static assets
+└── types/           # Global type definitions
 ```
 
-## Styling
+## Key Features in Detail
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+### Resume Analysis
 
----
+- **ATS Compatibility**: Analyzes how well your resume performs with Applicant Tracking Systems
+- **Content Analysis**: Evaluates the quality and relevance of your resume content
+- **Structure Review**: Checks the organization and formatting of your resume
+- **Skills Assessment**: Analyzes the match between your skills and job requirements
 
-Built with ❤️ using React Router.
+### Visual Feedback
+
+- Score gauges and badges
+- Color-coded feedback indicators
+- Interactive accordion sections for detailed feedback
+- PDF preview with image conversion
+
+
+
+

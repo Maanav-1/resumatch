@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "Resumind" },
+    { title: "ResuMatch" },
     { name: "description", content: "Smart feedback for you dream job!" },
   ];
 }
